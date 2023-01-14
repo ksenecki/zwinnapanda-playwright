@@ -1,0 +1,45 @@
+{
+  "name": "zwinnapanda-playwright",
+  "version": "1.0.0",
+  "description": "Software test automation with Playwright",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenecki/zwinnapanda-playwright.git"
+  },
+  "keywords": [
+    "zwinnapanda",
+    "tests",
+    "automation",
+    "playwright"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksenecki/zwinnapanda-playwright/issues"
+  },
+  "homepage": "https://github.com/ksenecki/zwinnapanda-playwright#readme",
+  "dependencies": {
+    "@playwright/test": "^1.29.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown --no-stash"
+  }
+}
