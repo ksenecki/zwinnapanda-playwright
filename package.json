@@ -9,7 +9,10 @@
   "scripts": {
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tests:chrome": "npx playwright test --config=playwright.config.ts --project=chrome",
+    "tests:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
+    "tests:webkit": "npx playwright test --config=playwright.config.ts --project=webkit"
   },
   "repository": {
     "type": "git",
