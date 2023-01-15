@@ -1,17 +1,15 @@
 import { test, expect } from "@playwright/test";
 
 test("First test", async ({ page }) => {
-  await page.goto("http://skleptest.pl/");
+  await page.goto("/");
   const siteTitle = await page.locator("a.site-title");
   await expect(siteTitle).toContainText("Generic Shop");
 });
 
 test("Open Most Wanted category", async ({ page }) => {
-  await page.goto("http://skleptest.pl/");
+  await page.goto("/");
   await page.click('a[title="Most Wanted"]');
-  await expect(page).toHaveURL(
-    "http://skleptest.pl/product-category/most-wanted/"
-  );
+  await expect(page).toHaveURL("/product-category/most-wanted/");
 });
 
 test.skip("Selektory", async ({ page }) => {
@@ -34,7 +32,7 @@ test.skip("Selektory", async ({ page }) => {
 
 test.describe("Login form tests", () => {
   test("Empty login form", async ({ page }) => {
-    await page.goto("http://skleptest.pl/");
+    await page.goto("/");
     await page.click(".top-account");
     await page.click('input[name="login"]');
     const errorMessage = await page.locator(".woocommerce-error li");
@@ -42,7 +40,7 @@ test.describe("Login form tests", () => {
   });
 
   test("Login form", async ({ page }) => {
-    await page.goto("http://skleptest.pl/");
+    await page.goto("/");
     await page.click(".top-account");
     await page.type("#username", "email@example.com", { delay: 100 });
     await page.type("#password", "password", { delay: 100 });
@@ -55,7 +53,7 @@ test.describe("Login form tests", () => {
 });
 
 test("Lost password invalid email @pass", async ({ page }) => {
-  await page.goto("http://skleptest.pl/");
+  await page.goto("/");
   await page.click(".top-account");
   await page.click("text=Lost your password?");
   const emailInput = await page.locator("#user_login");
@@ -67,7 +65,7 @@ test("Lost password invalid email @pass", async ({ page }) => {
 });
 
 test("Assercje", async ({ page }) => {
-  await page.goto("http://skleptest.pl/");
+  await page.goto("/");
   await expect(page).toHaveTitle("Generic Shop – Just another web shop");
   await expect(page.locator(".site-description")).toBeVisible();
   await expect(page.locator("h1")).not.toBeVisible();
