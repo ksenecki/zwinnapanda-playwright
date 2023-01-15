@@ -52,7 +52,7 @@ test("Login form", async ({ page }) => {
   );
 });
 
-test.only("Lost password invalid email", async ({ page }) => {
+test("Lost password invalid email", async ({ page }) => {
   await page.goto("http://skleptest.pl/");
   await page.click(".top-account");
   await page.click("text=Lost your password?");
@@ -62,4 +62,15 @@ test.only("Lost password invalid email", async ({ page }) => {
   await resetPasswordButton.click();
   const errorMessage = await page.locator(".woocommerce-error li");
   await expect(errorMessage).toContainText("Invalid username or email.");
+});
+
+test("Assercje", async ({ page }) => {
+  await page.goto("http://skleptest.pl/");
+  await expect(page).toHaveTitle("Generic Shop – Just another web shop");
+  await expect(page.locator(".site-description")).toBeVisible();
+  await expect(page.locator("h1")).not.toBeVisible();
+  await expect(page.locator(".site-description")).toHaveText(
+    "Just another web shop"
+  );
+  await expect(page.locator(".site-description")).toHaveCount(1);
 });
