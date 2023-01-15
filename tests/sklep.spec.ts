@@ -14,7 +14,7 @@ test("Open Most Wanted category", async ({ page }) => {
   );
 });
 
-test("Login form", async ({ page }) => {
+test("Empty login form", async ({ page }) => {
   await page.goto("http://skleptest.pl/");
   await page.click(".top-account");
   await page.click('input[name="login"]');
@@ -38,4 +38,28 @@ test.skip("Selektory", async ({ page }) => {
   //XPath
   await page.click("/header/div/div/div/p");
   await page.click('//h3[@class="widget-title"]');
+});
+
+test("Login form", async ({ page }) => {
+  await page.goto("http://skleptest.pl/");
+  await page.click(".top-account");
+  await page.type("#username", "email@example.com", { delay: 100 });
+  await page.type("#password", "password", { delay: 100 });
+  await page.click('input[name="login"]');
+  const errorMessage = await page.locator(".woocommerce-error li");
+  await expect(errorMessage).toContainText(
+    "Error: A user could not be found with this email address."
+  );
+});
+
+test.only("Lost password invalid email", async ({ page }) => {
+  await page.goto("http://skleptest.pl/");
+  await page.click(".top-account");
+  await page.click("text=Lost your password?");
+  const emailInput = await page.locator("#user_login");
+  const resetPasswordButton = await page.locator("[value='Reset password']");
+  await emailInput.fill("email@example.com");
+  await resetPasswordButton.click();
+  const errorMessage = await page.locator(".woocommerce-error li");
+  await expect(errorMessage).toContainText("Invalid username or email.");
 });
