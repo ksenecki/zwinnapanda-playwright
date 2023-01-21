@@ -3,7 +3,7 @@ import { PlaywrightTestConfig } from "@playwright/test";
 const config: PlaywrightTestConfig = {
   timeout: 30000,
   retries: 0,
-  testDir: "tests",
+  testDir: "tests/e2e",
   use: {
     headless: true,
     baseURL: "http://skleptest.pl",
