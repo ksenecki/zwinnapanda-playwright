@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@page-objects/*": ["page-objects/*"],
       "@utils/*": ["utils/*"]
     }
   }

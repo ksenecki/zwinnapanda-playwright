@@ -1,4 +1,5 @@
 # zwinnapanda-playwright
+
 Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtube.com/@zwinnapanda)
 
 ## Project requirements
@@ -12,10 +13,11 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 
 ## Install Playwright with npm
 
-1. `npm install @playwright/test`
-2. `npx playwright install`
+1. Playwright test module: `npm install @playwright/test`
+2. Playwright tools and drivers: `npx playwright install`
 
 ## Starting e2e test execution
 
-- basic test execution: `npx playwright test` 
-- it is possible to add more flags with `-- --flag`
+- basic test execution: `npx playwright test`
+- run projects using node scripts `npm run tests:chrome` for `chrome`, `firefox` or `webkit`
+- it is possible to add more flags when using npm scripts with `-- --<flag>`
