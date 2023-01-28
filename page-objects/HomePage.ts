@@ -7,6 +7,7 @@ export class HomePage {
   readonly wantedNavButton: Locator;
   readonly categoriesNavButton: Locator;
   readonly allCategoryButton: Locator;
+  readonly mainSlider: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +16,7 @@ export class HomePage {
     this.wantedNavButton = page.locator("a[title='Most Wanted']");
     this.categoriesNavButton = page.locator("a[title='Catergries']");
     this.allCategoryButton = page.locator("a[title='All']");
+    this.mainSlider = page.locator(".main-slider");
   }
 
   async loadHomePage() {
