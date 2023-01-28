@@ -13,7 +13,8 @@
     "tests:chrome": "npx playwright test --config=playwright.config.ts --project=chrome",
     "tests:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
     "tests:webkit": "npx playwright test --config=playwright.config.ts --project=webkit",
-    "tests:visual": "npx playwright test --config=visual.config.ts --project=chrome"
+    "tests:visual": "npx playwright test --config=visual.config.ts --project=chrome",
+    "tests:api": "npx playwright test --config=api.config.ts --project=chrome"
   },
   "repository": {
     "type": "git",

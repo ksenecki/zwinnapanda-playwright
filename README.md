@@ -25,3 +25,7 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 ## Visual test execution
 
 - run tests using node scripts `npm run tests:visual`
+
+## Api test execution
+
+- run tests using node scripts `npm run tests:api`
