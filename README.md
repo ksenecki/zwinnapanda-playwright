@@ -21,3 +21,7 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 - basic test execution: `npx playwright test`
 - run projects using node scripts `npm run tests:chrome` for `chrome`, `firefox` or `webkit`
 - it is possible to add more flags when using npm scripts with `-- --<flag>`
+
+## Visual test execution
+
+- run tests using node scripts `npm run tests:visual`
