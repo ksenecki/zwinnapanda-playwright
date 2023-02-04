@@ -25,3 +25,27 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 ## Visual test execution
 
 - run tests using node scripts `npm run tests:visual`
+
+## Visual PDF tests
+
+- `npm run test:pdf`
+
+Using [compare-pdf](https://www.npmjs.com/package/compare-pdf)
+
+```
+sudo apt-get install graphicsmagick
+sudo apt-get install imagemagick
+sudo apt-get install ghostscript
+```
+
+In order to use ImageMagic `policy.xml` modification is needed
+Use `sudo chmod 777 ~/etc/ImageMagick-6/policy.xml` and modify `policy.xml` as follows:
+change `rights="none"` to `rights"read|write"` in line `<policy domain="module" rights="read|write" pattern="PDF" />`
+
+- install compare-pdf with `npm install compare-pdf`
+
+## PDF content tests
+
+- `npm run test:pdf`
+- package used: [pdf2json](https://www.npmjs.com/package/pdf2json)
+- this is why `Node 18+` is needed
