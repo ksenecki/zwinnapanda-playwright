@@ -26,6 +26,10 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 
 - run tests using node scripts `npm run tests:visual`
 
+## Api test execution
+
+- run tests using node scripts `npm run tests:api`
+
 ## Visual PDF tests
 
 - `npm run test:pdf`
@@ -49,3 +53,4 @@ change `rights="none"` to `rights"read|write"` in line `<policy domain="module" 
 - `npm run test:pdf`
 - package used: [pdf2json](https://www.npmjs.com/package/pdf2json)
 - this is why `Node 18+` is needed
+
