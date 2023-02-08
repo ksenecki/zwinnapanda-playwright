@@ -4,7 +4,7 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 
 ## Project requirements
 
-1. [Node 16+](https://nodejs.org/en/docs/)
+1. [Node 18+](https://nodejs.org/en/docs/)
 
 ## How to setup the Project
 
@@ -32,10 +32,9 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 
 ## Visual PDF tests
 
-- `npm run test:pdf`
-
 Using [compare-pdf](https://www.npmjs.com/package/compare-pdf)
 
+Prerequisites:
 ```
 sudo apt-get install graphicsmagick
 sudo apt-get install imagemagick
@@ -46,7 +45,8 @@ In order to use ImageMagic `policy.xml` modification is needed
 Use `sudo chmod 777 ~/etc/ImageMagick-6/policy.xml` and modify `policy.xml` as follows:
 change `rights="none"` to `rights"read|write"` in line `<policy domain="module" rights="read|write" pattern="PDF" />`
 
-- install compare-pdf with `npm install compare-pdf`
+- install `compare-pdf` with `npm install compare-pdf`
+- `npm run test:pdf`
 
 ## PDF content tests
 
