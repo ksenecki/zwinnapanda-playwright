@@ -14,7 +14,9 @@
     "tests:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
     "tests:webkit": "npx playwright test --config=playwright.config.ts --project=webkit",
     "tests:visual": "npx playwright test --config=visual.config.ts --project=chrome",
+    "tests:pdf": "npx playwright test --config=pdf.config.ts --project=chrome"
     "tests:api": "npx playwright test --config=api.config.ts --project=chrome"
+
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,9 @@
   },
   "homepage": "https://github.com/ksenecki/zwinnapanda-playwright#readme",
   "dependencies": {
-    "@playwright/test": "^1.29.2"
+    "@playwright/test": "^1.29.2",
+    "compare-pdf": "^1.1.8",
+    "pdf2json": "^3.0.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.1",
@@ -46,5 +50,6 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown --no-stash"
-  }
+  },
+  "type": "module"
 }

@@ -12,6 +12,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }
