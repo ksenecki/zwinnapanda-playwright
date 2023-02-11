@@ -1,11 +1,13 @@
-name: Playwright Tests
+name: Playwright Tests with Docker
 
 on: workflow_dispatch
 
 jobs:
-  test:
-    timeout-minutes: 15
+  playwright:
+    name: "Playwright Tests with Docker"
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.30.0-focal
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -13,7 +15,5 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Run Playwright tests
+      - name: Run your tests
         run: npm run tests:chrome
