@@ -3,6 +3,7 @@ import { PlaywrightTestConfig } from "@playwright/test";
 const config: PlaywrightTestConfig = {
   timeout: 30000,
   retries: 0,
+  reporter: process.env.CI ? "github" : "list",
   testDir: "tests/e2e",
   use: {
     headless: true,
