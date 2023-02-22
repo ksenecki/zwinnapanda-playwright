@@ -30,11 +30,17 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 
 - run tests using node scripts `npm run tests:api`
 
+## Debugging
+
+- use `--debug` while debugging
+- use [PW-watch](https://www.npmjs.com/package/@deploysentinel/playwright-watch) with `npx pw-watch --reporter @deploysentinel/playwright`
+
 ## Visual PDF tests
 
 Using [compare-pdf](https://www.npmjs.com/package/compare-pdf)
 
 Prerequisites:
+
 ```
 sudo apt-get install graphicsmagick
 sudo apt-get install imagemagick
@@ -53,4 +59,3 @@ change `rights="none"` to `rights"read|write"` in line `<policy domain="module" 
 - `npm run test:pdf`
 - package used: [pdf2json](https://www.npmjs.com/package/pdf2json)
 - this is why `Node 18+` is needed
-
