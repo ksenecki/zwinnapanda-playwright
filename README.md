@@ -33,6 +33,7 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 ## Debugging
 
 - use `--debug` while debugging
+- use `--trace on` to enable trace
 - use [PW-watch](https://www.npmjs.com/package/@deploysentinel/playwright-watch) with `npx pw-watch --reporter @deploysentinel/playwright`
 
 ## Visual PDF tests
