@@ -3,7 +3,7 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   timeout: 30000,
   retries: 0,
-  reporter: process.env.CI ? "github" : "html",
+  reporter: process.env.CI ? "github" : "line",
   testDir: "tests/e2e",
   use: {
     headless: true,
