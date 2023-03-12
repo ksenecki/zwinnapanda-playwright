@@ -1,9 +1,9 @@
-import { PlaywrightTestConfig } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 
-const config: PlaywrightTestConfig = {
+export default defineConfig({
   timeout: 30000,
   retries: 0,
-  reporter: process.env.CI ? "github" : "list",
+  reporter: process.env.CI ? "github" : "html",
   testDir: "tests/e2e",
   use: {
     headless: true,
@@ -11,6 +11,7 @@ const config: PlaywrightTestConfig = {
     viewport: { width: 1280, height: 720 },
     actionTimeout: 15000,
     ignoreHTTPSErrors: true,
+    trace: "on-first-retry",
     video: "off",
     screenshot: "only-on-failure",
   },
@@ -28,6 +29,4 @@ const config: PlaywrightTestConfig = {
       use: { browserName: "webkit" },
     },
   ],
-};
-
-export default config;
+});
