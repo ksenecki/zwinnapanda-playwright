@@ -34,9 +34,10 @@
   },
   "homepage": "https://github.com/ksenecki/zwinnapanda-playwright#readme",
   "dependencies": {
-    "@playwright/test": "^1.31.2",
+    "@playwright/test": "^1.32.1",
     "compare-pdf": "^1.1.8",
-    "pdf2json": "^3.0.2"
+    "pdf2json": "^3.0.2",
+    "playwright": "^1.32.1"
   },
   "devDependencies": {
     "@deploysentinel/playwright": "^0.3.3",

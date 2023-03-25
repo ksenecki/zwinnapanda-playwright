@@ -13,7 +13,7 @@ test.describe("E2E: Home Page tests", () => {
     expect(page).toHaveURL("/");
   });
 
-  test.only("Open Most Wanted category", async ({ page }) => {
+  test("Open Most Wanted category", async ({ page }) => {
     await homePage.wantedNavButton.click();
     await expect(page).toHaveURL("/product-category/most-wanted/");
   });
