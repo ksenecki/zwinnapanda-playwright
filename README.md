@@ -22,6 +22,10 @@ Playwright tutorial repository for my channel: [@zwinnapanda](https://www.youtub
 - run projects using node scripts `npm run tests:chrome` for `chrome`, `firefox` or `webkit`
 - it is possible to add more flags when using npm scripts with `-- --<flag>`
 
+## UI mode
+
+Playwright 1.32 enables using interactive UI that can be run with `npx playwright test --ui`
+
 ## Visual test execution
 
 - run tests using node scripts `npm run tests:visual`
