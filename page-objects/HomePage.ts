@@ -9,6 +9,12 @@ export class HomePage {
   readonly allCategoryButton: Locator;
   readonly mainSlider: Locator;
 
+  readonly newsletterName: Locator;
+  readonly newsletterEmail: Locator;
+  readonly newsletterSubmitButton: Locator;
+  readonly newsletterMessage: Locator;
+  readonly footerTags: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.siteTitle = page.locator("a.site-title");
@@ -17,6 +23,12 @@ export class HomePage {
     this.categoriesNavButton = page.locator("a[title='Catergries']");
     this.allCategoryButton = page.locator("a[title='All']");
     this.mainSlider = page.locator(".main-slider");
+
+    this.newsletterName = page.locator("#es_txt_name");
+    this.newsletterEmail = page.locator("#es_txt_email");
+    this.newsletterSubmitButton = page.locator("#es_txt_button");
+    this.newsletterMessage = page.locator("#es_widget_msg #es_msg");
+    this.footerTags = page.locator(".tagcloud a");
   }
 
   async loadHomePage() {
