@@ -3,12 +3,13 @@ import { playAudit } from "playwright-lighthouse";
 import * as playwright from "playwright";
 
 test.describe("Lighthouse audit", () => {
-  test("Audit TestSklep", async ({ page }) => {
+  test("Audit TestSklep", async () => {
     const browser = await playwright["chromium"].launch({
       args: ["--remote-debugging-port=9222"],
     });
 
-    await page.goto("https://skleptest.pl/");
+    const page = await browser.newPage();
+    await page.goto("https://skleptest.pl");
 
     await playAudit({
       page: page,
