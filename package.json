@@ -8,14 +8,15 @@
   },
   "scripts": {
     "lint": "eslint . --fix --max-warnings=0",
-    "format": "prettier . --write",
+    "prettier": "prettier . --write",
     "prepare": "husky install",
     "tests:chrome": "npx playwright test --config=playwright.config.ts --project=chrome",
     "tests:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
     "tests:webkit": "npx playwright test --config=playwright.config.ts --project=webkit",
     "tests:visual": "npx playwright test --config=visual.config.ts --project=chrome",
     "tests:pdf": "npx playwright test --config=pdf.config.ts --project=chrome",
-    "tests:api": "npx playwright test --config=api.config.ts --project=chrome"
+    "tests:api": "npx playwright test --config=api.config.ts --project=chrome",
+    "lighthouse": "node tests/lighthouse/lighthouse.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   "dependencies": {
     "@playwright/test": "^1.32.1",
     "compare-pdf": "^1.1.8",
+    "lighthouse": "^10.2.0",
     "pdf2json": "^3.0.2",
     "playwright": "^1.32.1"
   },
